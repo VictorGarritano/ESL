@@ -14,19 +14,19 @@ print p
 U, d, V = svd(X_r, full_matrices=False)
 D = np.diag(d)
 print U.shape 	#N x p orthogonal matrix, whose columns
-				#are called left singular vectors
+		#are called left singular vectors
 
 print V.shape	#p x p orthogonal matrix, whose columns
-				#are called right singular vectors
+		#are called right singular vectors
 
 print D.shape	#p x p diagonal matrix, with diagonal
-				#elements known as singular values
+		#elements known as singular values
 
 PC = np.dot(U, D) #Principal components of X_r
 
 fig = plt.figure()
 plt.scatter(PC[:, 0], PC[:, 1]) #The first two principal
-								#components of the data
+				#components of the data
 plt.xlabel('First Principal Component')
 plt.ylabel('Second Principal Component')
 plt.title('The first two principal components of the data')
