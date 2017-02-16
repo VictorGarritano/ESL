@@ -104,4 +104,4 @@ for data in testloader:
     total += labels.size(0)
     correct += (predicted == labels).sum()
 
-print('Accuracy of the network on the 10000 test images: %d %%' % (100 * correct / total))
+print('Accuracy of the network on the 10000 test images: %f' % (float(correct) / total))
